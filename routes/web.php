@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Job;
+use App\Models\Post;
 
 Route::get('/', function () {
     return view('home');
