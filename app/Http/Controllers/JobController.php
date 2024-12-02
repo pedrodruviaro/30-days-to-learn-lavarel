@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Job;
-use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
@@ -50,6 +49,8 @@ class JobController extends Controller
     public function update(Job $job)
     {
 
+        // Gate::authorize('edit-job', $job);
+        
         request()->validate([
             'title' => ['required', 'min:3'],
             'salary' => ['required', 'min:3']
