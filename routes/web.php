@@ -30,6 +30,6 @@ Route::post('/logout', [SessionController::class, 'destroy']);
 
 
 
-
-
-
+Route::get('/test', function () {
+    return 'Done';
+});
